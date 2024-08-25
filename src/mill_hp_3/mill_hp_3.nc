@@ -3,6 +3,7 @@ O1001
 (MILL HP 3)
 (STOCK 6061AL DX 3.625IN DY 3.000IN DZ 1.000IN)
 (T01 = 1/2"  END MILL  03-0086)
+(T02 = 3/8"  END MILL  03-0085)
 (T07 = 1/4"  DRILL     03-0094)
 (T08 = 5/16" DRILL     03-0018)
 (T10 = 2.0"  FACE MILL 01-0001)
@@ -98,6 +99,7 @@ M00
 (OP 4)
 (WCS G54 FRONT-LEFT-TOP)
 (T01 = 1/2"  END MILL  03-0086)
+(T02 = 3/8"  END MILL  03-0085)
 (T07 = 1/4"  DRILL     03-0094)
 (T08 = 5/16" DRILL     03-0018)
 
@@ -154,6 +156,35 @@ M08 (Coolant on)
 (BEGIN CUTTING)
 G81 G98 Z-0.35 F28.506 (Drill hole at current X Y location, Z Axis returns to the starting position)
 G80 (Cancel drilling cycle)
+(END CUTTING)
+G00 Z0.1 M09 (Rapid retract, Coolant off)
+G53 G49 Z0.0 M05 (Z home, Spindle off) 
+G53 Y0.0 (Y home)
+
+
+(HOLD 'C' and HOLD 'D'. CIRCULAR POCKET MILLING)
+M01
+T02 M06
+G00 G90 G17 G40 G49 G54 (Safe startup)
+G00 G54 X1.7 Y1.6 (Rapid to 1st position)
+S10000 M03 (Spindle on CW)
+G43 H08 Z0.1 (Activate tool offset T08)
+M08 (Coolant on)
+(BEGIN CUTTING)
+(Z-0.3"    This specifies the depth of the pocket)
+(I0.1885"  This indicates the radius of the first circle)
+(K0.2"     This specifies the radius of the finished circle)
+(Q0.1885"  This is the radius increment or stepover. It means that the tool will move outward in increments of 0.1885 inches until it reaches the final radius)
+G13 Z-0.3 I0.1885 K0.2 Q0.1885 D02 F10.0
+G00 Z0.1
+X1.7 Y0.9
+G13 Z-0.3 I0.1885 K0.2 Q0.1885 D02 F10.0
+G01 X1.7 Y0.9 F650.0
+G41 D02 X1.9 (Cutter comp on)
+Y1.6
+X1.5
+Y0.9
+G40 X1.7 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off) 
