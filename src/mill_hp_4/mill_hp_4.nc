@@ -116,8 +116,11 @@ G01 Z-0.325 F108.0
 G41 D01 X0.8 (Cutter comp on)
 Y0.25
 X0.25
-Y2.25
-X3.5 (Mandatory, because the circular motion will not cut a space in the top-right)
+Y1.95
+G02 X0.55 Y2.25 R0.3 (CW circular motion)
+G01 X1.15
+G03 X1.85 I0.175 J0.0 (CW circular motion)
+G01 X3.5 (Mandatory, because the circular motion will not cut a space in the top-right)
 X2.75 (Going back)
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.25
