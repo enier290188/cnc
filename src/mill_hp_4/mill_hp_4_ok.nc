@@ -32,14 +32,19 @@ X0.25
 (2ND LAP)
 Y1.95
 G02 X0.55 Y2.25 R0.3 (CW circular motion)
-G01 X1.15
-G03 X1.85 I0.175 J0.0 (CW circular motion) (I0.175 is incorrect, the correct is I0.35)
+G01 X1.5
+G40 Y2.5 (Cutter comp off)
+G01 Y2.25
+G13 I0.25 K0.35 Q0.25 D01 F10.0
+G01 X1.5 Y2.5
+G41 D01 Y2.25 (Cutter comp on)
 G01 X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.7
 X2.75 Y0.25
 X0.8
 X0.25 Y0.6072
+X0.0 Y0.7695
 G40 X-1.0 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
