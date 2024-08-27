@@ -19,16 +19,19 @@ G43 H01 Z0.1 (Activate tool offset T01)
 M08 (Coolant on)
 (BEGIN CUTTING)
 G01 Z-0.32 F108.0
-G41 D01 X0.8 (Cutter comp on)
+(1ST LAP)
+G41 D01 X0.25 (Cutter comp on)
+Y2.25
+X3.25
 Y0.25
 X0.25
+(2ND LAP)
 Y2.25
-X3.5 (Mandatory, because the circular motion will not cut a part in the top-right)
-X2.75 (Going back)
+X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.25
 X0.8
-X0.0 Y0.7695
+X0.25 Y0.6072
 G40 X-1.0 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
