@@ -1,6 +1,7 @@
 %
 O1001
 (MILL HP 3)
+(Author: Enier Ramos)
 (STOCK 6061AL DX 3.50IN DY 2.50IN DZ 0.75IN, AFTER SQUARING THE BLOCK)
 (WCS G54 FRONT-LEFT-TOP)
 (T01 = 1/2"  END MILL  03-0086)
@@ -22,16 +23,19 @@ G43 H01 Z0.1 (Activate tool offset T01)
 M08 (Coolant on)
 (BEGIN CUTTING)
 G01 Z-0.325 F108.0
-G41 D01 X0.8 (Cutter comp on)
+(1ST LAP)
+G41 D01 X0.25 (Cutter comp on)
+Y2.25
+X3.25
 Y0.25
 X0.25
+(2ND LAP)
 Y2.25
-X3.5 (Mandatory, because the circular motion will not cut a part in the top-right)
-X2.75 (Going back)
+X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.25
 X0.8
-X0.0 Y0.7695
+X0.25 Y0.6072
 G40 X-1.0 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
@@ -74,17 +78,17 @@ T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
 G00 G54 X1.7 Y1.6 (Rapid to 1st position)
 S10000 M03 (Spindle on CW)
-G43 H08 Z0.1 (Activate tool offset T08)
+G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
 (Z-0.3"    This specifies the depth of the pocket)
-(I0.1885"  This indicates the radius of the first circle)
+(I0.1875"  This indicates the radius of the first circle)
 (K0.2"     This specifies the radius of the finished circle)
-(Q0.1885"  This is the radius increment or stepover. It means that the tool will move outward in increments of 0.1885 inches until it reaches the final radius)
-G13 Z-0.3 I0.1885 K0.2 Q0.1885 D02 F10.0
-G00 Z0.1
+(Q0.1875"  This is the radius increment or stepover. It means that the tool will move outward in increments of 0.1875 inches until it reaches the final radius)
+G13 Z-0.3 I0.1875 K0.2 Q0.1875 D02 F10.0
+G01 X1.7 Y1.6 F650.0
 X1.7 Y0.9
-G13 Z-0.3 I0.1885 K0.2 Q0.1885 D02 F10.0
+G13 Z-0.3 I0.1875 K0.2 Q0.1875 D02 F10.0
 G01 X1.7 Y0.9 F650.0
 G41 D02 X1.9 (Cutter comp on)
 Y1.6
