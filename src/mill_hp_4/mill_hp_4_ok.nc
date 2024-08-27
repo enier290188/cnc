@@ -76,7 +76,6 @@ G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off) 
 G53 Y0.0 (Y home)
 
-
 (HOLD 'C' and HOLD 'D'. CIRCULAR POCKET MILLING)
 T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
