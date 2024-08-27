@@ -86,13 +86,11 @@ M08 (Coolant on)
 (K0.2"     This specifies the radius of the finished circle)
 (Q0.1875"  This is the radius increment or stepover. It means that the tool will move outward in increments of 0.1875 inches until it reaches the final radius)
 G13 Z-0.3 I0.1875 K0.2 Q0.1875 D02 F10.0
-G01 X1.7 Y1.6 F650.0
-X1.7125
+G01 X1.7125 Y1.6 F650.0
 Y0.9
 X1.7
 G13 Z-0.3 I0.1875 K0.2 Q0.1875 D02 F10.0
-G01 X1.7 Y0.9 F650.0
-X1.6875
+G01 X1.6875 Y0.9 F650.0
 Y1.6
 X1.7
 (END CUTTING)
