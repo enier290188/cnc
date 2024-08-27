@@ -33,7 +33,7 @@ X0.25
 Y1.95
 G02 X0.55 Y2.25 R0.3 (CW circular motion)
 G01 X1.15
-G03 X1.85 I0.175 J0.0 (CW circular motion)
+G03 X1.85 I0.175 J0.0 (CW circular motion) (I0.175 is incorrect, the correct is I0.35)
 G01 X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.7
