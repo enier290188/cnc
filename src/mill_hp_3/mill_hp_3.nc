@@ -98,6 +98,10 @@ S10000 M03 (Spindle on CW)
 G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
+
+
+
+
 (Z-0.3"    This specifies the depth of the pocket)
 (I0.1875"  This indicates the radius of the first circle)
 (K0.2"     This specifies the radius of the finished circle)
@@ -110,6 +114,7 @@ G13 Z-0.3 I0.1875 K0.2 Q0.1875 D02 F10.0
 G01 X1.6875 Y0.9 F650.0
 Y1.6
 X1.7
+
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off) 
