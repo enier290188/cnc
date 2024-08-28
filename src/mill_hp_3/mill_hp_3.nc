@@ -9,8 +9,6 @@ O1001
 (T05 = 1/4"  SPOT DRILL  03-2222)
 (T07 = 1/4"  DRILL       03-0094)
 (T08 = 5/16" DRILL       03-0018)
-(T17 = 1/4"  REAMER      03-0650)
-(T18 = 5/16" REAMER      03-0356)
 G17 G20 G40 G49 G80
 G28
 M31
@@ -77,21 +75,6 @@ G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
 G53 Y0.0 (Y home)
 
-(REAM HOLD 'A')
-T17 M06
-G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X0.8 Y1.75 (Rapid to 1st position)
-S3820 M03 (Spindle on CW)
-G43 H17 Z0.1 (Activate tool offset T17)
-M08 (Coolant on)
-(BEGIN CUTTING)
-G85 G99 Z-0.45 R0.25 F11.46 (Ream hole at current X Y location)
-G80 (Cancels all active canned cycles)
-(END CUTTING)
-G00 Z0.1 M09 (Rapid retract, Coolant off)
-G53 G49 Z0.0 M05 (Z home, Spindle off)
-G53 Y0.0 (Y home)
-
 (DRILL HOLD 'B')
 T08 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
@@ -105,21 +88,6 @@ G80 (Cancels all active canned cycles)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
-G53 Y0.0 (Y home)
-
-(REAM HOLD 'B')
-T18 M06
-G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X2.775 Y0.65 (Rapid to 1st position)
-S3050 M03 (Spindle on CW)
-G43 H18 Z0.1 (Activate tool offset T18)
-M08 (Coolant on)
-(BEGIN CUTTING)
-G85 G99 Z-0.35 R0.25 F9.15 (Ream hole at current X Y location)
-G80 (Cancels all active canned cycles)
-(END CUTTING)
-G00 Z0.1 M09 (Rapid retract, Coolant off)
-G53 G49 Z0.0 M05 (Z home, Spindle off) 
 G53 Y0.0 (Y home)
 
 (HOLD 'C' and HOLD 'D'. CIRCULAR POCKET MILLING)
