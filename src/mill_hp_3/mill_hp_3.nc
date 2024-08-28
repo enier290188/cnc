@@ -52,7 +52,7 @@ S3820 M03 (Spindle on CW)
 G43 H05 Z0.1 (Activate tool offset T05)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G81 G99 Z-0.075 P0.5 R0.25 F11.46 (Spot drill at current X Y location)
+G81 G99 Z-0.05 P0.5 R0.25 F11.46 (Spot drill at current X Y location)
 X2.775 Y0.65
 G80 (Cancels all active canned cycles)
 (END CUTTING)
