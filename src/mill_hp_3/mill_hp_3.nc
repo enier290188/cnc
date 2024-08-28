@@ -90,7 +90,7 @@ G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
 G53 Y0.0 (Y home)
 
-(MILL POINT 'C' TO POINT 'D')
+(POCKET MILLING. POINT 'C' TO POINT 'D')
 T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
 G00 G54 X1.7 Y1.6 (Rapid to 1st position)
