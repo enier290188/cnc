@@ -7,8 +7,8 @@ O1001
 (T01 = 1/2"  END MILL    03-0086)
 (T02 = 3/8"  END MILL    03-0085)
 (T05 = 1/4"  SPOT DRILL  03-2222)
-(T07 = 1/4"  DRILL       03-0094, 140° Point Angle)
-(T08 = 5/16" DRILL       03-0018, 140° Point Angle)
+(T07 = 1/4"  DRILL       03-0094, 140 Point Angle)
+(T08 = 5/16" DRILL       03-0018, 140 Point Angle)
 G17 G20 G40 G49 G80
 G28
 M31
