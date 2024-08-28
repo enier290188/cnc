@@ -33,17 +33,9 @@ X0.25
 (2ND LAP)
 Y1.95
 G02 X0.55 Y2.25 R0.3 (CW circular motion)
-
-
-
-G01 X1.5
-G40 Y2.5 (Cutter comp off)
-G01 Y2.25
-G13 I0.25 K0.35 Q0.25 D01 F10.0
-G01 X1.5 Y2.5
-G41 D01 Y2.25 (Cutter comp on)
-
-
+G01 X1.15
+G03 X1.5 Y1.9 R0.35 (CW circular motion)
+G03 X1.85 Y2.25 R0.35 (CW circular motion)
 G01 X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.7
@@ -60,13 +52,13 @@ G53 Y0.0 (Y home)
 (SPOT DRILL)
 T05 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X0.8 Y1.75 (Rapid to 1st position)
+G00 G54 X0.8 Y1.63 (Rapid to 1st position)
 S3820 M03 (Spindle on CW)
 G43 H05 Z0.1 (Activate tool offset T05)
 M08 (Coolant on)
 (BEGIN CUTTING)
 G81 G99 Z-0.05 P0.5 R0.25 F11.46 (Spot drill at current X Y location)
-X2.775 Y0.65
+X2.71 Y0.76
 G80 (Cancels all active canned cycles)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
@@ -76,7 +68,7 @@ G53 Y0.0 (Y home)
 (DRILL HOLD 'A')
 T07 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X0.8 Y1.75 (Rapid to 1st position)
+G00 G54 X0.8 Y1.63 (Rapid to 1st position)
 S3820 M03 (Spindle on CW)
 G43 H07 Z0.1 (Activate tool offset T07)
 M08 (Coolant on)
@@ -91,7 +83,7 @@ G53 Y0.0 (Y home)
 (DRILL HOLD 'B')
 T08 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X2.775 Y0.65 (Rapid to 1st position)
+G00 G54 X2.71 Y0.76 (Rapid to 1st position)
 S3050 M03 (Spindle on CW)
 G43 H08 Z0.1 (Activate tool offset T08)
 M08 (Coolant on)
