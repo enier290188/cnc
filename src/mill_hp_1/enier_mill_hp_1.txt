@@ -33,6 +33,7 @@ G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.25
 X0.8
 X0.25 Y0.6072
+X0.0 Y0.7695
 G40 X-1.0 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
