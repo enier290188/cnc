@@ -90,7 +90,7 @@ G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
 G53 Y0.0 (Y home)
 
-(HOLD 'C' and HOLD 'D'. CIRCULAR POCKET MILLING)
+(MILL POINT 'C' TO POINT 'D')
 T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
 G00 G54 X1.7 Y1.6 (Rapid to 1st position)
@@ -100,28 +100,41 @@ M08 (Coolant on)
 (BEGIN CUTTING)
 G01 X1.7 Y0.9 Z0.0 F100.0
 X1.7 Y1.6
+X1.7 Y0.9 Z-0.025
+X1.7 Y1.6
 X1.7 Y0.9 Z-0.05
+X1.7 Y1.6
+X1.7 Y0.9 Z-0.075
 X1.7 Y1.6
 X1.7 Y0.9 Z-0.1
 X1.7 Y1.6
+X1.7 Y0.9 Z-0.125
+X1.7 Y1.6
 X1.7 Y0.9 Z-0.15
+X1.7 Y1.6
+X1.7 Y0.9 Z-0.175
 X1.7 Y1.6
 X1.7 Y0.9 Z-0.2
 X1.7 Y1.6
+X1.7 Y0.9 Z-0.225
+X1.7 Y1.6
 X1.7 Y0.9 Z-0.25
+X1.7 Y1.6
+X1.7 Y0.9 Z-0.275
 X1.7 Y1.6
 X1.7 Y0.9 Z-0.3
 X1.7 Y1.6
-G41 D02 X1.9 Y0.95 (Cutter comp on)
+G41 D02 X1.5 Y0.915 (Cutter comp on)
 G01 Y0.9
-G02 X1.7 Y0.7 R0.2 (CW circular motion)
-G02 X1.5 Y0.9 R0.2 (CW circular motion)
+G03 X1.7 Y0.7 R0.2 (CW circular motion)
+G03 X1.9 Y0.9 R0.2 (CW circular motion)
 G01 Y1.6
-G02 X1.7 Y1.8 R0.2 (CW circular motion)
-G02 X1.9 Y1.6 R0.2 (CW circular motion)
+G03 X1.7 Y1.8 R0.2 (CW circular motion)
+G03 X1.5 Y1.6 R0.2 (CW circular motion)
 G01 Y0.9
-X1.7
-G40 Y1.6 (Cutter comp off)
+G03 X1.7 Y0.7 R0.2 (CW circular motion)
+G03 X1.9 Y0.9 R0.2 (CW circular motion)
+G40 G01 X1.7 Y1.6 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off) 
