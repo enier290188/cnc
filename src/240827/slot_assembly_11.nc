@@ -34,10 +34,6 @@ Y-1.0
 X-2.5
 Y-2.0
 X6.0
-Y-3.0
-X-2.5
-Y-4.0
-X6.0
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
@@ -55,7 +51,7 @@ G01 Z-0.601 F108.0
 (1ST LAP)
 G41 D01 Y-0.01 (Cutter comp on)
 X3.31
-Y-2.01
+Y-1.81
 X0.01
 Y1.0
 G40 X-1.0 (Cutter comp off)
