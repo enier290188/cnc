@@ -80,34 +80,51 @@ S10000 M03 (Spindle on CW)
 G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 X0.75 Y-1.349 Z0.0 F100.0
+G01 X0.75 Y-1.349 Z0.0 F50.0
+X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.025
 X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.05
 X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.075
+X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.1
+X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.125
 X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.15
 X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.175
+X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.2
+X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.225
 X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.25
 X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.275
+X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.3
+X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.325
 X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.35
 X0.75 Y-0.451
+X0.75 Y-1.349 Z-0.375
+X0.75 Y-0.451
 X0.75 Y-1.349 Z-0.4
 X0.75 Y-0.451
-G42 D02 X0.949 Y-1.3 (Cutter comp on)
+G41 D02 X0.551 Y-1.334 (Cutter comp on)
 G01 Y-1.349
-G02 X0.75 Y-1.548 R0.199 (CW circular motion)
-G02 X0.551 Y-1.349 R0.199 (CW circular motion)
+G03 X0.75 Y-1.548 R0.199 (CW circular motion)
+G03 X0.949 Y-1.349 R0.199 (CW circular motion)
 G01 Y-0.451
-G02 X0.75 Y-0.252 R0.199 (CW circular motion)
-G02 X0.949 Y-0.451 R0.199 (CW circular motion)
+G03 X0.75 Y-0.252 R0.199 (CW circular motion)
+G03 X0.551 Y-0.451 R0.199 (CW circular motion)
 G01 Y-1.349
-X0.75
-G40 Y-0.451 (Cutter comp off)
+G03 X0.75 Y-1.548 R0.199 (CW circular motion)
+G03 X0.949 Y-1.349 R0.199 (CW circular motion)
+G40 G01 X0.75 Y-0.451 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
