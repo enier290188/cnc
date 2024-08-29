@@ -196,7 +196,23 @@ M00
 (T10 = 2.0"  FACE MILL   01-0001)
 
 (FACE BOTTOM)
-M01
+T10 M06
+G00 G90 G17 G40 G49 G54 (Safe startup)
+G00 G54 X-2.5 Y0.0 (Rapid to 1st position)
+S5800 M03 (Spindle on CW)
+G43 H10 Z0.1 (Activate tool offset T10)
+M08 (Coolant on)
+(BEGIN CUTTING)
+G01 Z-0.001 F25.0
+X5.8
+Y-1.0
+X-2.5
+Y-2.0
+X5.8
+(END CUTTING)
+G00 Z0.1 M09 (Rapid retract, Coolant off)
+G53 G49 Z0.0 M05 (Z home, Spindle off)
+G53 Y0.0 (Y home)
 
 
 
