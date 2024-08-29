@@ -98,7 +98,7 @@ S10000 M03 (Spindle on CW)
 G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 X1.7 Y0.9 Z0.0 F100.0
+G01 X1.7 Y0.9 Z0.0 F40.0
 X1.7 Y1.6
 X1.7 Y0.9 Z-0.025
 X1.7 Y1.6
