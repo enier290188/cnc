@@ -219,7 +219,7 @@ X2.799 Y-0.9 Z-0.375
 X1.801 Y-0.9
 X2.799 Y-0.9 Z-0.4
 X1.801 Y-0.9
-G41 D01 X2.784 Y-1.149 (Cutter comp on)
+G41 D02 X2.784 Y-1.149 (Cutter comp on)
 G01 X2.799
 G03 X3.048 Y-0.9 R0.249 (CW circular motion)
 G03 X2.799 Y-0.651 R0.249 (CW circular motion)
