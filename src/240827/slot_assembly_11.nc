@@ -178,14 +178,14 @@ G53 G49 Z0.0 M05 (Z home, Spindle off)
 G53 Y0.0 (Y home)
 
 (2ND POCKET MILLING)
-T01 M06
+T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
 G00 G54 X1.801 Y-0.9 (Rapid to 1st position)
 S10000 M03 (Spindle on CW)
-G43 H01 Z0.1 (Activate tool offset T01)
+G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 X2.799 Y-0.9 Z0.0 F108.0
+G01 X2.799 Y-0.9 Z0.0 F50.0
 X1.801 Y-0.9
 X2.799 Y-0.9 Z-0.025
 X1.801 Y-0.9
