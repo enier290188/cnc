@@ -28,7 +28,7 @@ S5800 M03 (Spindle on CW)
 G43 H10 Z0.1 (Activate tool offset T10)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 Z-0.001 F25.0
+G01 Z-0.0 F25.0
 X6.0
 Y-1.0
 X-2.5
@@ -47,12 +47,12 @@ S10000 M03 (Spindle on CW)
 G43 H01 Z0.1 (Activate tool offset T01)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 Z-0.601 F108.0
+G01 Z-0.600 F108.0
 (1ST LAP)
-G41 D01 Y-0.01 (Cutter comp on)
-X3.31
-Y-1.81
-X0.01
+G41 D01 Y-0.05 (Cutter comp on)
+X3.35
+Y-1.85
+X0.05
 Y1.0
 G40 X-1.0 (Cutter comp off)
 (END CUTTING)
@@ -250,7 +250,7 @@ S5800 M03 (Spindle on CW)
 G43 H10 Z0.1 (Activate tool offset T10)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 Z-0.001 F25.0
+G01 Z-0.0 F25.0
 X6.0
 Y-1.0
 X-2.5
