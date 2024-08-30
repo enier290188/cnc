@@ -34,8 +34,7 @@ X0.25
 Y1.95
 G02 X0.55 Y2.25 R0.3 (CW circular motion)
 G01 X1.15
-G03 X1.5 Y1.9 R0.35 (CW circular motion)
-G03 X1.85 Y2.25 R0.35 (CW circular motion)
+G03 X1.85 Y2.25 I0.35 J0.0 (CW circular motion)
 G01 X2.75
 G02 X3.25 Y1.75 R0.5 (CW circular motion)
 G01 Y0.7
@@ -73,7 +72,7 @@ S3820 M03 (Spindle on CW)
 G43 H07 Z0.1 (Activate tool offset T07)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G83 G99 Z-0.5222 R0.25 Q0.15 F7.64 (Drill hole at current X Y location. Z=0.45+0.0722)
+G83 G99 Z-0.4922 R0.25 Q0.15 F7.64 (Drill hole at current X Y location. Z=0.42+0.0722)
 G80 (Cancels all active canned cycles)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
@@ -88,45 +87,63 @@ S3050 M03 (Spindle on CW)
 G43 H08 Z0.1 (Activate tool offset T08)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G83 G99 Z-0.4402 R0.25 Q0.15 F6.1 (Drill hole at current X Y location. Z=0.35+0.0902)
+G83 G99 Z-0.3702 R0.25 Q0.15 F6.1 (Drill hole at current X Y location. Z=0.28+0.0902)
 G80 (Cancels all active canned cycles)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off)
 G53 Y0.0 (Y home)
 
-(HOLD 'C' and HOLD 'D'. CIRCULAR POCKET MILLING)
+(POCKET MILLING. POINT 'C' TO POINT 'D')
 T02 M06
 G00 G90 G17 G40 G49 G54 (Safe startup)
-G00 G54 X1.7 Y1.6 (Rapid to 1st position)
+G00 G54 X1.7 Y1.52 (Rapid to 1st position)
 S10000 M03 (Spindle on CW)
 G43 H02 Z0.1 (Activate tool offset T02)
 M08 (Coolant on)
 (BEGIN CUTTING)
-G01 X1.7 Y0.9 Z0.0 F100.0
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.05
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.1
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.15
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.2
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.25
-X1.7 Y1.6
-X1.7 Y0.9 Z-0.3
-X1.7 Y1.6
-G41 D02 X1.9 Y0.95 (Cutter comp on)
-G01 Y0.9
-G02 X1.7 Y0.7 R0.2 (CW circular motion)
-G02 X1.5 Y0.9 R0.2 (CW circular motion)
-G01 Y1.6
-G02 X1.7 Y1.8 R0.2 (CW circular motion)
-G02 X1.9 Y1.6 R0.2 (CW circular motion)
-G01 Y0.9
-X1.7
-G40 Y1.6 (Cutter comp off)
+G01 X1.7 Y0.75 Z0.0 F40.0
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.025
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.05
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.075
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.1
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.125
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.15
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.175
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.2
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.225
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.25
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.275
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.3
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.325
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.35
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.375
+X1.7 Y1.52
+X1.7 Y0.75 Z-0.4
+X1.7 Y1.52
+G41 D02 X1.475 Y0.765 (Cutter comp on)
+G01 Y0.75
+G03 X1.925 I0.225 J0.0 (CW circular motion)
+G01 Y1.52
+G03 X1.475 I-0.225 J0.0 (CW circular motion)
+G01 Y0.75
+G03 X1.925 I0.225 J0.0 (CW circular motion)
+G40 G01 X1.7 Y1.52 (Cutter comp off)
 (END CUTTING)
 G00 Z0.1 M09 (Rapid retract, Coolant off)
 G53 G49 Z0.0 M05 (Z home, Spindle off) 
