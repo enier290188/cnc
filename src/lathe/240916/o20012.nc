@@ -22,7 +22,7 @@ M08 (Coolant on)
 G71 P10 Q20 U0.02 W0.01 D.05 F0.01
 N10 G01 G42 X-0.062 Z0.1 (Cutter comp on)
 Z0.0
-X0.45 
+X0.45
 X0.5 Z-0.025
 Z-0.45
 G02 X0.6 Z-0.5 R0.05
@@ -36,7 +36,7 @@ G01 Z-1.45
 G02 X1.6 Z-1.5 R0.05
 G01 X1.84
 G03 X1.94 Z-1.55 R0.05
-G01 Z-1.6 
+G01 Z-1.6
 N20 G01 G40 X2.1 (Cutter comp off)
 (END CUTTING BLOCKS)
 G00 Z0.1 M09 (Rapid retract, coolant off)
