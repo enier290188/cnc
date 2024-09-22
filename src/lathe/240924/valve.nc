@@ -1,8 +1,9 @@
 %
 O2003
 (VALVE)
-(TO1 = 80* Rough Turning Tool,  Insert Number: 02-0546, Tool Holder: 01-0263, Tool Nose Radius: .0315, Tool Tip: 3)
-(T02 = 35* Finish Turning Tool, Insert Number: 02-0350, Tool Holder: 01-0112, Tool Nose Radius: .0157, Tool Tip: 3)
+(TO1 = 80* Rough Turning Tool, Insert: 02-0546, Tool Holder: 01-0263, Tool Nose Radius: .0315, Tool Tip: 3)
+(T02 = 35* Finish Turning Tool, Insert: 02-0350, Tool Holder: 01-0112, Tool Nose Radius: .0157, Tool Tip: 3)
+(T12 = Cutoff Tool, Insert: 02-0494, Tool Holder: 01-0151 01-0155)
 G00 G18 G20 G40 G80 G99 (Safe startup)
 G28
 M31
@@ -15,29 +16,27 @@ M31
 (ROUGHING)
 T0101 (Select tool 01 and offset 01)
 G50 S3000 (Limit spindle to 3000RPM)
-G96 S1000 M03 (CSS on, Spindle on CW)
-G00 G54 X2.1 Z0.1 (Rapid to 1st position)
+G96 S1600 M03 (CSS on, Spindle on CW)
+G00 G54 X1.6 Z0.1 (Rapid to 1st position, P0)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
 G71 P10 Q20 U0.02 W0.01 D.05 F0.01
 N10 G00 G42 X-0.062 Z0.1 (Cutter comp on)
 G01 Z0.0
-X0.45
-X0.5 Z-0.025
-Z-0.45
-G02 X0.6 Z-0.5 R0.05
-G01 X0.9
-G03 X1.0 Z-0.55 R0.05
-G01 Z-0.95
-G02 X1.1 Z-1.0 R0.05
-G01 X1.4
-G03 X1.5 Z-1.05 R0.05
-G01 Z-1.45
-G02 X1.6 Z-1.5 R0.05
-G01 X1.84
-G03 X1.94 Z-1.55 R0.05
-G01 Z-1.6
-G00 X2.1
+X0.238 (P1)
+X0.36 Z-0.061 (P2)
+Z-0.239 (P3)
+X0.238 Z-0.3 (P4)
+Z-0.468 (P5)
+X0.32 (P6)
+G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
+G01 Z-1.194 (P8)
+G02 X1.114 Z-1.7261 R0.564 (P9)
+G01 X1.415 Z-1.825 (P10)
+Z-1.98 (P11)
+X1.375 Z-2.0 (P12)
+Z-2.157 (P13)
+G00 X1.6
 N20 G00 G40 Z0.1 (Cutter comp off)
 (END CUTTING BLOCKS)
 G00 Z0.1 M09 (Rapid retract, coolant off)
