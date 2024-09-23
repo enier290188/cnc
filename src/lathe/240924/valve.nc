@@ -45,7 +45,7 @@ M00
 T0202 (Select tool 02 and offset 02)
 G50 S3000 (Limit spindle to 3000RPM)
 G96 S1600 M03 (CSS on, Spindle on CW)
-G00 G54 X1.6 Z0.1 (Rapid to 1st position)
+G00 G54 X1.6 Z0.1 (Rapid to 1st position, P0)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
 (Finish 1)
@@ -101,6 +101,28 @@ Z-2.157 (P13)
 X1.455
 G00 X1.6
 G00 G40 Z0.1 (Cutter comp off)
+(END CUTTING BLOCKS)
+G00 Z0.1 M09 (Rapid retract, coolant off)
+G53 G00 X0.0 (X home)
+G53 G00 Z0.0 M05 (Z home, spindle off)
+
+
+
+M00
+(OP 3)
+(CUT OFF)
+T1212 (Select tool 12 and offset 12)
+G50 S2500 (Limit spindle to 2500RPM)
+G96 S490 M03 (CSS on, Spindle on CW)
+G00 G54 X1.6 Z0.1 (Rapid to 1st position, P0)
+Z-2.157
+X1.455
+M08 (Coolant on)
+(BEGIN CUTTING BLOCKS)
+G01 X1.375 F0.005
+G75 X0.025 I0.005
+G01 X1.455
+G00 X1.6
 (END CUTTING BLOCKS)
 G00 Z0.1 M09 (Rapid retract, coolant off)
 G53 G00 X0.0 (X home)
