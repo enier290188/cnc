@@ -48,21 +48,31 @@ G96 S1600 M03 (CSS on, Spindle on CW)
 G00 G54 X1.6 Z0.1 (Rapid to 1st position)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
-
 (Finish 1)
 G70 P10 Q20 F0.005
-
 (Finish 2)
 G00 Z-0.239
 G00 G42 X0.4 Z-0.239 (Cutter comp on)
 G01 X0.36 F0.001 (P3)
+X0.32 Z-0.259 (P3-1)
+Z-0.468 (P6)
+G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
+G01 X0.4
+G00 Z-0.239
+G01 X0.36 (P3)
+X0.28 Z-0.279 (P3-2)
+X0.28 Z-0.468
+X0.32 (P6)
+G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
+G01 X0.4
+G00 Z-0.239
+G01 X0.36 (P3)
 X0.238 Z-0.3 (P4)
 Z-0.468 (P5)
 X0.32 (P6)
 G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
 G01 X0.4
 G00 G40 X1.6 (Cutter comp off)
-
 (Finish 3)
 G00 Z-1.98
 G00 G42 X1.455 Z-1.98 (Cutter comp on)
@@ -72,10 +82,9 @@ Z-2.157 (P13)
 X1.455
 G00 G40 X1.6 (Cutter comp off)
 G00 Z0.1
-
 (Finish All)
 G00 G42 X-0.062 Z0.1 (Cutter comp on)
-G01 Z0.0
+G01 Z0.0 F0.005
 X0.238 (P1)
 X0.36 Z-0.061 (P2)
 Z-0.239 (P3)
@@ -92,7 +101,6 @@ Z-2.157 (P13)
 X1.455
 G00 X1.6
 G00 G40 Z0.1 (Cutter comp off)
-
 (END CUTTING BLOCKS)
 G00 Z0.1 M09 (Rapid retract, coolant off)
 G53 G00 X0.0 (X home)
