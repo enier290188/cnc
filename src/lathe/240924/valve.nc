@@ -16,12 +16,12 @@ M00
 (OP 1)
 (ROUGHING)
 T0101 (Select tool 01 and offset 01)
-G50 S3000 (Limit spindle to 3000RPM)
-G96 S1600 M03 (CSS on, Spindle on CW)
+G50 S3500 (Limit spindle to 3500RPM)
+G96 S900 M03 (CSS on, Spindle on CW)
 G00 G54 X1.6 Z0.1 (Rapid to 1st position, P0)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
-G71 P10 Q20 U0.02 W0.01 D.05 F0.01
+G71 P10 Q20 U0.02 W0.01 D.05 F0.008
 N10 G00 G42 X-0.062 Z0.1 (Cutter comp on)
 G01 Z0.0
 X0.238 (P1)
@@ -43,13 +43,13 @@ M00
 (OP 2)
 (FINISHING)
 T0202 (Select tool 02 and offset 02)
-G50 S3000 (Limit spindle to 3000RPM)
-G96 S1600 M03 (CSS on, Spindle on CW)
+G50 S3500 (Limit spindle to 3500RPM)
+G96 S1300 M03 (CSS on, Spindle on CW)
 G00 G54 X1.6 Z0.1 (Rapid to 1st position, P0)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
 (Finish 1)
-G70 P10 Q20 F0.005
+G70 P10 Q20 F0.004
 (Finish 2)
 G00 Z-0.239
 G00 G42 X0.4 Z-0.239 (Cutter comp on)
@@ -58,14 +58,18 @@ X0.32 Z-0.259 (P3-1)
 Z-0.468 (P6)
 G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
 G01 X0.4
-G00 Z-0.239
+G00 X1.6
+Z-0.239
+X0.4
 G01 X0.36 (P3)
 X0.28 Z-0.279 (P3-2)
 X0.28 Z-0.468
 X0.32 (P6)
 G03 X0.36 Z-0.488 I0.0 K-0.02 (P7)
 G01 X0.4
-G00 Z-0.239
+G00 X1.6
+Z-0.239
+X0.4
 G01 X0.36 (P3)
 X0.238 Z-0.3 (P4)
 Z-0.468 (P5)
