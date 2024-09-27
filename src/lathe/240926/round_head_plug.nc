@@ -93,14 +93,17 @@ M08 (Coolant on)
 (Finish 1)
 G70 P30 Q40 F0.002
 (Finish 2)
+G00 X1.6 Z-0.745
+X1.3
 G71 P50 Q60 U0.02 W0.01 D.02 F0.002
-N50 G00 G42 X1.0 Z0.1 (Cutter comp on)
-G01 Z-0.755 (Q1)
+N50 G00 G42 X1.1 Z-0.745 (Cutter comp on)
+G01 Z-0.755 (Q0)
+G01 X1.0 (Q1)
 X0.8 Z-0.855 (Q2)
 Z-0.95 (Q3)
 G02 X0.9 Z-1.0 R0.05 (Q4)
 G01 X1.3
-N60 G00 G40 Z0.1 (Cutter comp off)
+N60 G00 G40 Z-0.745 (Cutter comp off)
 (Finish 3)
 G70 P50 Q60 F0.002
 (END CUTTING BLOCKS)
