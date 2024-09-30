@@ -111,20 +111,6 @@ G00 Z0.1 M09 (Rapid retract, coolant off)
 G53 G00 X0.0 (X home)
 G53 G00 Z0.0 M05 (Z home, spindle off)
 
-M01
-(THREADING)
-T0103 (Select tool 03 and offset 03)
-G50 S1000 (Limit spindle to 1000RPM)
-G96 S900 M03 (CSS on, Spindle on CW)
-G00 G54 X1.6 Z0.1 (Rapid to 1st position)
-M08 (Coolant on)
-(BEGIN CUTTING BLOCKS)
-
-(END CUTTING BLOCKS)
-G00 Z0.1 M09 (Rapid retract, coolant off)
-G53 G00 X0.0 (X home)
-G53 G00 Z0.0 M05 (Z home, spindle off)
-
 
 
 M33
