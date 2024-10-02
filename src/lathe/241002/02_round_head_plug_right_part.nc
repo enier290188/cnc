@@ -47,6 +47,7 @@ M08 (Coolant on)
 G96 S1295 (CSS on)
 (Finish 1)
 G70 P30 Q40 F0.004
+M01
 (Finish 2)
 G00 X1.6 Z-0.745
 X1.3
