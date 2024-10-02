@@ -47,7 +47,7 @@ G00 G54 X1.6 Z0.1 (Rapid to 1st position)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
 G96 S1295 (CSS on)
-G70 P10 Q20 F0.001
+G70 P10 Q20 F0.004
 (END CUTTING BLOCKS)
 G97 S2000 (CSS off)
 G00 Z0.1 M09 (Rapid retract, coolant off)
