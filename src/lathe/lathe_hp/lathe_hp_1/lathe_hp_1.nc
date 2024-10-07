@@ -46,7 +46,7 @@ G97 S2000 M03 (CSS off, Spindle on CW)
 G00 G54 X1.6 Z0.1 (Rapid to 1st position)
 M08 (Coolant on)
 (BEGIN CUTTING BLOCKS)
-G96 S900 (CSS on)
+G96 S1295 (CSS on)
 G70 P10 Q20 F0.004
 (END CUTTING BLOCKS)
 G97 S2000 (CSS off)
