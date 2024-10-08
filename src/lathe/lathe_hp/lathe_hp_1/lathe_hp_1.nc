@@ -1,5 +1,5 @@
 %
-O2001
+O1001
 (HP 1)
 (MATERIAL: 1018 CRS)
 (TO1 = 80* Rough Turning Tool, Insert: 02-0083, Tool Holder: 01-0263, Tool Nose Radius: .0315, Tool Tip: 3)
